@@ -1,0 +1,5 @@
+# This lists the files that do not get pushed to the repository
+# This prevents tampering from others
+.env
+venv/
+__pycache__/
