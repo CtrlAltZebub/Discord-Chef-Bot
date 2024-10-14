@@ -31,13 +31,19 @@ class RecipeSearch(commands.Cog):
         url = "https://api.spoonacular.com/recipes/complexSearch"
         # Dictionary to map input keywords to API query parameters
         param_map = {
-            "meal_type": "type",
+            "meal type": "type",
             "cuisine": "cuisine",
-            "ingredient": "includeIngredient",
+            "ingredients": "includeIngredients",
             "allergies": "intolerances",
             "diet": "diet",
             "time": "maxReadyTime",
             "number": "number",
+        }
+
+        # Initialise the query parameters
+        query_params = {
+            "meal type": "main course",
+            "number": 1 # Default to 1 result
         }
         if filters:
             # Split input into parts by space and then into key: value pairs
@@ -45,12 +51,12 @@ class RecipeSearch(commands.Cog):
             for part in filter_parts:
                 try:
                     # Split into key and value
-                    key, value = part.split(':')
+                    key, value = part.split('=')
                     if key in param_map:
                         # Use param_map to get the right API parameter
-                        header[param_map[key]] = value
+                        query_params[param_map[key]] = value
                 except ValueError:
-                    await ctx.send()
+                    await ctx.send(f"Invalid filter format for {part}. Please use the format key=value.")
 
         # Build the URL request with all the parameters
         response = requests.get(url, header)
@@ -69,7 +75,8 @@ class RecipeSearch(commands.Cog):
                     message += (
                         f"**{recipe['title']}**\n"
                         f"{recipe.get('image', 'No image available')}\n"
-                        f"{recipe['servings']}, {recipe['preparationMinutes']}, {recipe['cookingMinutes']}\n"
+                        f"Serves: {recipe['servings']}, "
+                        f"Prep time: {recipe['preparationMinutes']}mins, Cook time: {recipe['cookingMinutes']}mins\n"
                         f"{recipe['sourceUrl']}"
                     )
 
