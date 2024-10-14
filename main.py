@@ -2,7 +2,6 @@ from dotenv import load_dotenv
 import os
 import discord
 from discord.ext import commands
-import requests
 
 # Load environment variables from the .env file
 load_dotenv()
@@ -32,6 +31,7 @@ async def custom_help(ctx):
     await ctx.send(help_message)
 
 # Bot Commands here
-
+bot.load_extension('cogs.random_recipe') # Gets a random recipe
+bot.load_extension('recipe_search') # Searches for a recipe based on given filters
 
 bot.run(os.getenv('DISCORD_TOKEN'))
