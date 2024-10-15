@@ -42,7 +42,7 @@ class RecipeSearch(commands.Cog):
 
         # Initialise the query parameters
         query_params = {
-            "meal type": "main course",
+            "meal type": "main course", # Default to main course / dinner recipes
             "number": 1 # Default to 1 result
         }
         if filters:
@@ -59,10 +59,10 @@ class RecipeSearch(commands.Cog):
                     await ctx.send(f"Invalid filter format for {part}. Please use the format key=value.")
 
         # Build the URL request with all the parameters
-        response = requests.get(url, header)
+        response = requests.get(url, headers=header, params=query_params)
 
         try:
-            response.raise_for_status()
+            response.raise_for_status() # Raise an exception for HTTP errors
             data = response.json()
 
             # Build the message to send back
