@@ -19,7 +19,7 @@ class RandomRecipe(commands.Cog):
     It will then grab the recipe and send it in a specific channel (#food).
     Error Handling will help deal with any request errors  
     """
-    @commands.command(name='recipe')
+    @commands.command(name='random')
     async def random_recipe(self, ctx):
         try:
             # URL and header for the random recipe
@@ -31,15 +31,17 @@ class RandomRecipe(commands.Cog):
             recipe = data['recipes'][0]
             # Reply to the command with a formatted message
             # Include recipe name, total time and recipe link
+            ready_time = recipe.get('readyInMinutes', 'No time given') # Get time value or fallback to no time message
+            ready_time = ready_time if ready_time is not None else 'No time given'
             await ctx.send(
                 f"Here's a random recipe: {recipe['title']}\n"
                 f"{recipe['image']}\n"
-                f"{recipe['servings']}, {recipe['preparationMinutes']}, {recipe['cookingMinutes']}\n"
+                f"Servings: {recipe['servings']}, Time: {ready_time} mins\n"
                 f"{recipe['sourceUrl']}")
         except requests.exceptions.RequestException as e:
             await ctx.send()
             print(f"Error: {e}")
 
 
-def setup(bot):
-    bot.add_cog(RandomRecipe(bot))
+async def setup(bot):
+    await bot.add_cog(RandomRecipe(bot))
