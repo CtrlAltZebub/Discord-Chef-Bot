@@ -1,7 +1,7 @@
 from discord.ext import commands
 from discord import app_commands
 import discord
-from recipe_search import RecipeSearch
+from cogs.recipe_search import RecipeSearch
 import random
 import os
 

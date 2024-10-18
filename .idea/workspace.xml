@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1eb8615f-57ec-485c-afd3-d65d3c085849" name="Changes" comment="Updated the code to work asynchronously (main.py, ingredient_info.py, random_recipe.py). Made changes to recipe_search.py (added slash commands, restructured code for readability/scalability)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1eb8615f-57ec-485c-afd3-d65d3c085849" name="Changes" comment="Added meal_plan cog to loaded commands">
       <change beforePath="$PROJECT_DIR$/cogs/meal_plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/cogs/meal_plan.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -150,7 +149,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729115197909</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Created the meal plan command based on the RecipeSearch class. Functionality should allow users to customise plan length and which daily meals are included in the plan.">
+      <option name="closed" value="true" />
+      <created>1729262248047</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1729262248047</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added meal_plan cog to loaded commands">
+      <option name="closed" value="true" />
+      <created>1729262337523</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1729262337523</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -177,6 +192,8 @@
     <MESSAGE value="Adjusted the recipe_search code for better functionality." />
     <MESSAGE value="Added the code for the ingredient information command" />
     <MESSAGE value="Updated the code to work asynchronously (main.py, ingredient_info.py, random_recipe.py). Made changes to recipe_search.py (added slash commands, restructured code for readability/scalability)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated the code to work asynchronously (main.py, ingredient_info.py, random_recipe.py). Made changes to recipe_search.py (added slash commands, restructured code for readability/scalability)" />
+    <MESSAGE value="Created the meal plan command based on the RecipeSearch class. Functionality should allow users to customise plan length and which daily meals are included in the plan." />
+    <MESSAGE value="Added meal_plan cog to loaded commands" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added meal_plan cog to loaded commands" />
   </component>
 </project>
