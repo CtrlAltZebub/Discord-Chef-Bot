@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1eb8615f-57ec-485c-afd3-d65d3c085849" name="Changes" comment="Added the code for the ingredient information command">
+    <list default="true" id="1eb8615f-57ec-485c-afd3-d65d3c085849" name="Changes" comment="Updated the code to work asynchronously (main.py, ingredient_info.py, random_recipe.py). Made changes to recipe_search.py (added slash commands, restructured code for readability/scalability)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cogs/ingredient_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/cogs/ingredient_info.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cogs/meal_plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/cogs/meal_plan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cogs/random_recipe.py" beforeDir="false" afterPath="$PROJECT_DIR$/cogs/random_recipe.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cogs/recipe_search.py" beforeDir="false" afterPath="$PROJECT_DIR$/cogs/recipe_search.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,12 +27,12 @@
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {}
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/CtrlAltZebub/Discord-Chef-Bot.git",
-    "accountId": "a6331b4d-b2cb-4399-90d4-74bd07e7873e"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/CtrlAltZebub/Discord-Chef-Bot.git&quot;,
+    &quot;accountId&quot;: &quot;a6331b4d-b2cb-4399-90d4-74bd07e7873e&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -146,7 +142,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729011968156</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Updated the code to work asynchronously (main.py, ingredient_info.py, random_recipe.py). Made changes to recipe_search.py (added slash commands, restructured code for readability/scalability)">
+      <option name="closed" value="true" />
+      <created>1729115197909</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1729115197909</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -172,6 +176,7 @@
     <MESSAGE value="Added initial code for the basic recipe search commands. random_recipe pulls a completely random item from the spoonacular db. recipe_search takes user input to refine the search for something more specific." />
     <MESSAGE value="Adjusted the recipe_search code for better functionality." />
     <MESSAGE value="Added the code for the ingredient information command" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the code for the ingredient information command" />
+    <MESSAGE value="Updated the code to work asynchronously (main.py, ingredient_info.py, random_recipe.py). Made changes to recipe_search.py (added slash commands, restructured code for readability/scalability)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated the code to work asynchronously (main.py, ingredient_info.py, random_recipe.py). Made changes to recipe_search.py (added slash commands, restructured code for readability/scalability)" />
   </component>
 </project>
