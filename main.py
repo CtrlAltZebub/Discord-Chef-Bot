@@ -26,10 +26,18 @@ async def on_ready():
 
 # Bot Commands here
 async def load_extensions():
-    await bot.load_extension('cogs.random_recipe') # Gets a random recipe
-    await bot.load_extension('cogs.recipe_search') # Searches for a recipe based on given filters
-    await bot.load_extension('cogs.ingredient_info') # Searches for information on a specific ingredient
-    await bot.load_extension('cogs.meal_plan') # Creates a meal plan for a user based on the recipe_search command
+    extensions = [
+        'cogs.random_recipe',
+        'cogs.recipe_search',
+        'cogs.ingredient_info',
+        'cogs.meal_plan',
+    ]
+    for ext in extensions:
+        try:
+            await bot.load_extension(ext)
+            print(f"Loaded {ext} successfully")
+        except Exception as e:
+            print(f"{ext} failed to load: {e}")
 
 # Handling invalid commands
 @bot.event
