@@ -29,6 +29,7 @@ async def load_extensions():
     await bot.load_extension('cogs.random_recipe') # Gets a random recipe
     await bot.load_extension('cogs.recipe_search') # Searches for a recipe based on given filters
     await bot.load_extension('cogs.ingredient_info') # Searches for information on a specific ingredient
+    await bot.load_extension('cogs.meal_plan') # Creates a meal plan for a user based on the recipe_search command
 
 # Handling invalid commands
 @bot.event
